@@ -1,0 +1,24 @@
+<div class="container">
+    <br>
+    <h3>Event List</h3>
+      <table class="table table-hover">
+            
+        <tr>
+            <th>Event Name</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Location</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="getschedule in data">
+            <td>{{getschedule.name}}</td>
+            <td>{{getschedule.date}}</td>
+            <td>{{getschedule.time | date: "HH:mm:ss"}}</td>
+            <td>{{getschedule.location}}</td>
+           
+            <td><a href="#!/EditSchedules/{{getschedule.Id}}" class="btn btn-info">Edit</a></td>
+            <td><a ng-click="deleteSchedule(getschedule)" class="btn btn-danger">Delete</a></td>
+        </tr>
+    </table> 
+</div>
