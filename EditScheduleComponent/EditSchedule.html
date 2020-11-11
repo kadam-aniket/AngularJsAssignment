@@ -1,0 +1,48 @@
+<html>
+    <body>
+        <div class="container">
+            <br/>
+            <h3>Edit Schedule </h3>
+            <form class="form-horizontal" ng-submit="editSchedule(schedule.$id)">
+                <div class="row">
+                    <div class="form-group">
+                        <label class="col-sm-4">Event:</label>
+                        <div class="col-md-6"> <input type="text" ng-model="schedule.name"/></div>
+                    </div>
+                    <div class="">
+                        <div class="col-md-4">Date:</div>
+                        <div class="col-md-6"> <input id="datepicker" width="200" ng-model="schedule.date"/></div>
+                    </div>
+                </div>
+                <br/>
+        
+                <div class="row">
+                    <div class="">
+                        <div class="col-md-1">Time:</div>
+                        <div class="col-md-2"><input type="text" ng-model="schedule.time" placeholder="HH:mm:ss"> </div>
+                         <!-- <div class="md-form col-sm-3">
+                            <input placeholder="Selected time" type="text" id="input_starttime" class="form-control timepicker">
+                            <label for="input_starttime">Twelve hour clock</label>
+                        </div>  -->
+                    </div>
+                    <div class="">
+                        <div class="col-md-1">Location:</div>
+                        <div class="col-md-4"> <input type="text" width="200" ng-model="schedule.location"/></div>
+                    </div>
+                </div>
+                <br/>
+                <button type="submit" class="btn btn-success">Update</button>
+            </form>
+        </div>
+        <br/>
+
+        <script>
+            $('#datepicker').datepicker({
+                uiLibrary: 'bootstrap4'
+            });
+        </script>
+    </body>
+</html>
+
+        
+
