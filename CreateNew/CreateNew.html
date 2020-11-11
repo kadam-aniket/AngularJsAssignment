@@ -1,0 +1,65 @@
+<html>
+    <body>
+        <div class="container">
+            <br/>
+            <h3>Create New Event</h3>
+            <form class="form-horizontal" >
+                <div class="row">
+                    <div class="form-group">
+                        <label class="col-sm-4">Event:</label>
+                        <div class="col-md-6"> <input type="text" ng-model="schedule.name"/></div>
+                    </div>
+                    <div class="">
+                        <div class="col-md-4">Date:</div>
+                        <div class="col-md-6"> <input id="datepicker" width="200" ng-model="schedule.date"/></div>
+                    </div>
+                </div>
+                <br/>
+        
+                <div class="row">
+                    <div class="">
+                        <div class="col-md-1">Time:</div>
+                        <div class="col-md-2"><input type="text" ng-model="schedule.time" placeholder="HH:mm:ss"> </div>
+                    </div>
+                    <div class="">
+                        <div class="col-md-1">Location:</div>
+                        <div class="col-md-4"> <input type="text" width="200" ng-model="schedule.location"/></div>
+                    </div>
+                </div>
+                <br/>
+                <button class="btn btn-success" ng-click="Create(name,date,time,location)">Save</button>
+                
+            </form>
+        </div>
+        <br/>
+
+          <!-- <table class="table table-hover container">
+            <tr>
+                <th>Event Name</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Location</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="getschedule in data">
+                <td>{{getschedule.name}}</td>
+                <td>{{getschedule.date}}</td>
+                <td>{{getschedule.time | date: "HH:mm:ss"}}</td>
+                <td>{{getschedule.location}}</td>
+
+                <td><a href="#!/EditSchedules/{{$id}}" class="btn btn-info">Edit</a></td>
+                <td><a ng-click="deleteSchedule(getschedule)" class="btn btn-danger">Delete</a></td>
+            </tr>
+        </table>     -->
+
+        <script>
+            $('#datepicker').datepicker({
+                uiLibrary: 'bootstrap4'
+            });
+        </script>
+    </body>
+</html>
+
+        
+
